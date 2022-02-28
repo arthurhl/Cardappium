@@ -1,7 +1,7 @@
+import 'package:Cardappium/utils/colors.dart';
+import 'package:Cardappium/utils/dimensions.dart';
+import 'package:Cardappium/widgets/small_text.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/utils/colors.dart';
-import 'package:food_delivery/utils/dimensions.dart';
-import 'package:food_delivery/widgets/small_text.dart';
 
 class ExpandableTextWidget extends StatefulWidget {
   final String text;
@@ -37,19 +37,21 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
     return Container(
       child: secondHalf.isEmpty
           ? SmallText(
-          color: AppColors.paraColor,
-        size: Dimensions.font16,
-          text: firstHalf)
+              color: AppColors.paraColor,
+              size: Dimensions.font16,
+              text: firstHalf)
           : Column(
               children: [
                 SmallText(
-                  height: 1.2,
-                  color: AppColors.paraColor,
-                  size: Dimensions.font16,
+                    height: 1.2,
+                    color: AppColors.paraColor,
+                    size: Dimensions.font16,
                     text: hiddenText
                         ? (firstHalf + "...")
                         : (firstHalf + secondHalf)),
-                SizedBox(height: Dimensions.height10/2,),
+                SizedBox(
+                  height: Dimensions.height10 / 2,
+                ),
                 InkWell(
                   onTap: () {
                     setState(() {
@@ -58,27 +60,29 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
                   },
                   child: Row(
                     children: [
-                      hiddenText ?
-                      SmallText(
-                        size: Dimensions.font16,
-                        text: "Mostrar mais" ,
-                        color: AppColors.mainColor,
-                      ) : SmallText(
-                        size: Dimensions.font16,
-                        text: "Mostrar menos" ,
-                        color: AppColors.mainColor,
-                      ) ,
-                       Icon(
-                        hiddenText ?
-                        Icons.arrow_drop_down
-                        : Icons.arrow_drop_up,
+                      hiddenText
+                          ? SmallText(
+                              size: Dimensions.font16,
+                              text: "Mostrar mais",
+                              color: AppColors.mainColor,
+                            )
+                          : SmallText(
+                              size: Dimensions.font16,
+                              text: "Mostrar menos",
+                              color: AppColors.mainColor,
+                            ),
+                      Icon(
+                        hiddenText
+                            ? Icons.arrow_drop_down
+                            : Icons.arrow_drop_up,
                         color: AppColors.mainColor,
                       )
                     ],
                   ),
-
                 ),
-                SizedBox(height: Dimensions.height10,)
+                SizedBox(
+                  height: Dimensions.height10,
+                )
               ],
             ),
     );

@@ -1,11 +1,11 @@
+import 'package:Cardappium/controllers/popular_product_controller.dart';
+import 'package:Cardappium/routes/route_helper.dart';
+import 'package:Cardappium/utils/colors.dart';
+import 'package:Cardappium/utils/dimensions.dart';
+import 'package:Cardappium/widgets/app_icon.dart';
+import 'package:Cardappium/widgets/big_text.dart';
+import 'package:Cardappium/widgets/expandable_text_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/controllers/popular_product_controller.dart';
-import 'package:food_delivery/routes/route_helper.dart';
-import 'package:food_delivery/utils/colors.dart';
-import 'package:food_delivery/utils/dimensions.dart';
-import 'package:food_delivery/widgets/app_icon.dart';
-import 'package:food_delivery/widgets/big_text.dart';
-import 'package:food_delivery/widgets/expandable_text_widget.dart';
 import 'package:get/get.dart';
 
 class RecommendedFoodDetail extends StatelessWidget {
@@ -54,7 +54,7 @@ class RecommendedFoodDetail extends StatelessWidget {
                     child: Center(
                       child: BigText(
                         size: Dimensions.font26,
-                        text: "Chinese Side",
+                        text: "Macarrão",
                       ),
                     ),
                     width: double.maxFinite,
@@ -148,9 +148,8 @@ class RecommendedFoodDetail extends StatelessWidget {
             ),
           ],
         ),
-        bottomNavigationBar: GetBuilder<PopularProductController>(
-          builder: (popularProduct) {
-            return Column(
+        bottomNavigationBar:
+           Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
@@ -165,7 +164,7 @@ class RecommendedFoodDetail extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          popularProduct.setQuantity(false);
+                         // popularProduct.setQuantity(false);
                         },
                         child: AppIcon(
                             iconSize: Dimensions.iconSize16,
@@ -175,14 +174,14 @@ class RecommendedFoodDetail extends StatelessWidget {
                       ),
                       BigText(
                         text: "R\$12.88 "
-                                " X " +
-                            popularProduct.quantity.toString(),
+                                " X 1",
+                           // popularProduct.quantity.toString(),
                         color: AppColors.mainBlackColor,
                         size: Dimensions.font26,
                       ),
                       GestureDetector(
                         onTap: () {
-                          popularProduct.setQuantity(true);
+                         // popularProduct.setQuantity(true);
                         },
                         child: AppIcon(
                             iconSize: Dimensions.iconSize16,
@@ -247,8 +246,8 @@ class RecommendedFoodDetail extends StatelessWidget {
                   ),
                 ),
               ],
-            );
-          },
-        ));
+            ),
+
+    );
   }
 }

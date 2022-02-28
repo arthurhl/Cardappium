@@ -1,6 +1,6 @@
+import 'package:Cardappium/utils/colors.dart';
+import 'package:Cardappium/utils/dimensions.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/utils/colors.dart';
-import 'package:food_delivery/utils/dimensions.dart';
 
 class AnimatedSearchBar extends StatefulWidget {
   const AnimatedSearchBar({Key? key}) : super(key: key);

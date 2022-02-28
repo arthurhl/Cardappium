@@ -19,7 +19,6 @@ class SmallText extends StatelessWidget {
     return Text(
       text,
         style: TextStyle(
-
             color: color,
             fontSize: size,
             fontFamily: 'Roboto',

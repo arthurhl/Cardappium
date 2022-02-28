@@ -1,12 +1,12 @@
+import 'package:Cardappium/routes/route_helper.dart';
+import 'package:Cardappium/utils/colors.dart';
+import 'package:Cardappium/utils/dimensions.dart';
+import 'package:Cardappium/widgets/app_column.dart';
+import 'package:Cardappium/widgets/big_text.dart';
+import 'package:Cardappium/widgets/icon_and_text_widget.dart';
+import 'package:Cardappium/widgets/small_text.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/routes/route_helper.dart';
-import 'package:food_delivery/utils/colors.dart';
-import 'package:food_delivery/utils/dimensions.dart';
-import 'package:food_delivery/widgets/app_column.dart';
-import 'package:food_delivery/widgets/big_text.dart';
-import 'package:food_delivery/widgets/icon_and_text_widget.dart';
-import 'package:food_delivery/widgets/small_text.dart';
 import 'package:get/get.dart';
 
 class FoodPageBody extends StatefulWidget {
@@ -69,7 +69,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           height: Dimensions.height10,
         ),
         Container(
-          margin: EdgeInsets.only(left: Dimensions.width30),
+          margin: EdgeInsets.only(left: Dimensions.width30, bottom: Dimensions.height10),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -101,7 +101,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         ListView.builder(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
-            itemCount: 10,
+            itemCount: 5,
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
@@ -145,11 +145,11 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                BigText(text: "Nutritious fruit meal in China"),
+                                BigText(text: "Macarrão com Macarrão"),
                                 SizedBox(
                                   height: Dimensions.height10,
                                 ),
-                                SmallText(text: "With chinese characteristics"),
+                                SmallText(text: "E mais macarrão"),
                                 SizedBox(
                                   height: Dimensions.height10,
                                 ),
@@ -173,6 +173,102 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                                         iconColor: AppColors.iconColor2),
                                   ],
                                 )
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              );
+            }),
+        Container(
+          margin: EdgeInsets.only(top: Dimensions.height30, left: Dimensions.width30, bottom: Dimensions.height10),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              BigText(
+                text: "Bebidas",
+                size: Dimensions.font26,
+              ),
+              SizedBox(
+                height: Dimensions.width10,
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 3),
+                child: BigText(
+                    text: ".", size: Dimensions.font26, color: Colors.black26),
+              ),
+              SizedBox(
+                height: Dimensions.width10,
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 2),
+                child: SmallText(
+                  text: "Destaques",
+                  size: Dimensions.font20,
+                ),
+              )
+            ],
+          ),
+        ),
+        ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: 5,
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  Get.toNamed(RouteHelper.getRecommendedFood());
+                },
+                child: Container(
+                  margin: EdgeInsets.only(
+                      left: Dimensions.width20,
+                      right: Dimensions.width20,
+                      bottom: Dimensions.height10),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: Dimensions.listViewImgSize,
+                        height: Dimensions.listViewImgSize,
+                        decoration: BoxDecoration(
+                          borderRadius:
+                          BorderRadius.circular(Dimensions.radius20),
+                          color: Colors.white38,
+                          image: const DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage("assets/image/food0.png"),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          height: Dimensions.listViewTextContSize,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(Dimensions.radius20),
+                              bottomRight: Radius.circular(Dimensions.radius20),
+                            ),
+                            color: Colors.white,
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                                left: Dimensions.width10,
+                                right: Dimensions.width10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                BigText(text: "Suco de Macarrão"),
+                                SizedBox(
+                                  height: Dimensions.height10,
+                                ),
+                                SmallText(text: "Polpa de Macarrão"),
+                                SizedBox(
+                                  height: Dimensions.height10,
+                                ),
+
                               ],
                             ),
                           ),
@@ -255,12 +351,17 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 BoxShadow(color: Colors.white, offset: Offset(5, 0))
               ],
             ),
-            child: Container(
-                padding: EdgeInsets.only(
-                    top: Dimensions.height15, left: 15, right: 15),
-                child: const AppColumn(
-                  text: "Chinese Side",
-                )),
+            child: GestureDetector(
+              onTap: (){
+                Get.toNamed(RouteHelper.popularFood);
+              },
+              child: Container(
+                  padding: EdgeInsets.only(
+                      top: Dimensions.height15, left: 15, right: 15),
+                  child: const AppColumn(
+                    text: "Macarrão",
+                  )),
+            ),
           ),
         ),
       ]),
