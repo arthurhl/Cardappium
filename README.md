@@ -1,20 +1,31 @@
 
-<h1 align="center">Cardappium</h3>  
+<h1 align="center">Cardappium</h1>  
 
 ## Sobre o Projeto
-
+ Frontend de uma aplicação de cardápio e pedidos online, estando presencialmente no ambiente.
   
-
+## Cliente
 <div align="center">
-  <img alt="Cardappium" src="https://raw.githubusercontent.com/arthurhl/Cardappium/master/assets/image/Frame%201cardappium1.png" width="100%">
-  <img alt="Cardappium" src="https://github.com/arthurhl/Cardappium/blob/master/assets/image/Frame%202cardappium2.png" width="100%">
+ 
+  <img alt="Cardappium" src="https://github.com/arthurhl/Cardappium/blob/master/assets/image/cardappium1.png?raw=true">
+  <img alt="Cardappium2" src="https://github.com/arthurhl/Cardappium/blob/master/assets/image/cardappium2.png?raw=true">
+  
+  </div>
+  
+  
+## Admin
+ 
+ <div align="center">
+  <img alt="Cardappium2" src="https://github.com/arthurhl/Cardappium/blob/master/assets/image/cardappium3.png?raw=true">
 
+<h3 align="center">Utilização do Aplicativo</h3>  
+  
 ![](https://media2.giphy.com/media/U8fpEBWGTVZnynXzHk/giphy.gif)
 ![](https://media0.giphy.com/media/jdJIbcSGt41MG3EOGk/giphy.gif)
 ![](https://media2.giphy.com/media/capUGArtCfMGeauCej/giphy.gif)
   
- Frontend de uma aplicação de cardápio e pedidos online
-</div>
+  </div>
+
 
 
 
