@@ -7,8 +7,8 @@
 ## Cliente
 <div align="center">
  
-  <img alt="Cardappium" src="https://github.com/arthurhl/Cardappium/blob/master/assets/image/cardappium1.png?raw=true">
-  <img alt="Cardappium2" src="https://github.com/arthurhl/Cardappium/blob/master/assets/image/cardappium2.png?raw=true">
+  <img alt="Cardappium" src="https://github.com/arthurhl/Cardappium/blob/master/assets/image/cardappium1%20(1).png?raw=true">
+  <img alt="Cardappium2" src="https://github.com/arthurhl/Cardappium/blob/master/assets/image/cardappium1%20(2).png?raw=true">
   
   </div>
   
@@ -16,7 +16,7 @@
 ## Admin
  
  <div align="center">
-  <img alt="Cardappium2" src="https://github.com/arthurhl/Cardappium/blob/master/assets/image/cardappium3.png?raw=true">
+  <img alt="Cardappium2" src="https://github.com/arthurhl/Cardappium/blob/master/assets/image/cardappium1%20(3).png?raw=true">
 
 <h3 align="center">Utilização do Aplicativo</h3>  
   
